@@ -1,15 +1,17 @@
 <?php
-    $number = 0;
-    
-    if($number>3){
-        $text = ($number%2==0 || $number%3==0)?"$number is not prime number":"$number is prime number";
-        echo $text;
+    $num=12;
+    $reminder=0;
+    for($i=2; $i<$num; $i++){
+        if($num % $i == 0)
+        {
+            $reminder=1;
+            break;
+        }
     }
-    elseif ($number==1||$number==2||$number==3){
-        echo "$number is prime number";
-    }
-    else{
-        echo "$number is not in consideration";
-    }
+    if($reminder==0)
+        echo "$num is  prime number";
+    else
+        echo "$num is not prime number";
+        echo "<br/>";
     
 ?>
